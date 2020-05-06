@@ -1,4 +1,4 @@
-My very own Git NotesMy very own Git NotesMy very own Git NotesMy very own Git Notes
+My very own Git NotesMy very own Git NotesMy very own Git NotesMy very own Git NotesMy very own Git NotesMy very own Git Notes
 1. Install git 
 2. Open cmd
 3. Check if it works by typing 
