@@ -1,0 +1,92 @@
+My very own Git NotesMy very own Git NotesMy very own Git NotesMy very own Git Notes
+1. Install git 
+2. Open cmd
+3. Check if it works by typing 
+git
+4. Type 
+git config
+(there is a global config for this computer and there can be project based configs)
+5. Type 
+git config --list or git config -l
+6. To change email or user name:
+git config ?-global user.name = "Alexandra Rollins"
+git config ?-global user.email = alexandra.rollins@bwv-aachen.de
+
+7. Inside project folder: 
+git init
+8. To show status of files: git status
+9. To stage:  git add 
+git add . #adds all files
+to unstage: git rm 
+
+#Adding a readme file:
+git add README.md
+10. git commit -m ?initial commit?
+
+
+git remote add origin git@github.com:schulefant/dp01-strategy.git	
+git commit -m ?initial commit?
+## -u sets up the default for pushing 
+## origin is the github location specified by the git remote add command
+## master is the master branch on the origin
+git push -u origin master
+## using the default settings indicated on the first push:
+git push 
+
+
+
+Working with SSH keys in github
+1. Open Git Bash.
+2. Paste the text below, substituting in your GitHub email address.
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+This creates a new ssh key, using the provided email as a label.
+> Generating public/private rsa key pair.
+3. When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+> Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]
+4. At the prompt, type a secure passphrase. For more information, see "Working with SSH key passphrases".
+5. > Enter passphrase (empty for no passphrase): [Type a passphrase]
+> Enter same passphrase again: [Type passphrase again]
+Start ssh agent
+# start the ssh-agent in the background
+$ eval $(ssh-agent -s)
+> Agent pid 59566
+
+Add key to ssh agent:
+$ ssh-add ~/.ssh/id_rsa
+Adding a new SSH key to your GitHub account
+# Open rsa.pub in an editor and copy it to clipboard
+# online go to your user system settings and add your key with add new key
+Testing a connection:
+1. Open Git Bash.
+2. Enter the following:
+ssh -T git@github.com
+1. You may see a warning like this:
+> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+> RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+> Are you sure you want to continue connecting (yes/no)?
+or like this:
+> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+> RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+> Are you sure you want to continue connecting (yes/no)?
+2. Verify that the fingerprint in the message you see matches  messag in step 2, then type 
+yes:
+> Hi username! You've successfully authenticated, but GitHub does not
+> provide shell access.
+
+
+
+branching and merging:
+git branch 				shows which branch we are currently on
+git branch <nameOfBranch>		creates a new branch
+git checkout <nameOfBranch>		moves HEAD-pointer to the branch
+git diff <normMaster>..<nameOfBranchToMerge>	shows the differences between the 2 branches
+git merge <branchToMergeIntoCurrent>	fast merge integrates the changes of the branch into current
+git log --oneline			shows all commits in a compact form
+git branch ?merged			shows which branches were merged
+git branch -d <nameOfBranchToBeDeleted>	deletes a branch, has safety net, if it has not been merged git git branch -D <nameOfBranchToBeDeleted>	forces a deletion of a branch, without safety net
+git merge <branchToMergeIntoCurrent>	3way merge integrates the changes of the branch into current
+
+--The End--
+--The End--
+--The End--
+--The End--
