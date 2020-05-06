@@ -1,4 +1,5 @@
-My very own Git NotesMy very own Git NotesMy very own Git NotesMy very own Git NotesMy very own Git NotesMy very own Git Notes
+My very own Git Notes
+
 1. Install git 
 2. Open cmd
 3. Check if it works by typing 
@@ -86,7 +87,4 @@ git branch ?merged			shows which branches were merged
 git branch -d <nameOfBranchToBeDeleted>	deletes a branch, has safety net, if it has not been merged git git branch -D <nameOfBranchToBeDeleted>	forces a deletion of a branch, without safety net
 git merge <branchToMergeIntoCurrent>	3way merge integrates the changes of the branch into current
 
---The End--
---The End--
---The End--
 --The End--
